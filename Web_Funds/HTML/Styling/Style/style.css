@@ -1,0 +1,32 @@
+.my_cloud{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 50px;
+    padding: 10px;
+}
+
+#cloud{
+    color: #00FFFF;
+}
+
+.Completed_projects{
+    background-color: #663399;
+    color: #F0EBF5;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    padding: 10px;
+}
+
+.contact_us{
+    background-color: #9FC5F8;
+    color: #484982;
+    text-align: right;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.headers_div{
+    margin: 10px;
+}
