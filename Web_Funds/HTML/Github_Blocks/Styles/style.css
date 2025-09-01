@@ -1,0 +1,39 @@
+.container_div{
+    background-color: #E3FBFF;
+    width: 720px;
+    height: 860px;
+    margin: 0 auto;
+    padding: 5px 0 0 25px;
+}
+
+#header_name{
+    text-align: center;
+}
+
+.img_octocat {
+    width: 200px;
+    height: 200px;
+}
+
+.size_padding_margin{
+    height: 250px;
+    width: 700px;
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.blue_div{
+    background-color: #63CFFE;
+    justify-content: space-around;
+}
+
+.pink_div{
+    background-color: #CEA2BE;
+    justify-content: space-evenly;
+}
+
+.white_div{
+    background-color: #FCFCFF;
+    justify-content: space-around;
+}
