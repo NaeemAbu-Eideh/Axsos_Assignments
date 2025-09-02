@@ -1,0 +1,36 @@
+.user-card{
+    position: relative;
+    border: 1px solid gray;
+    width: 450px;
+    height: 310px;
+    margin: 25px auto;
+}
+.blue-div{
+    height: 100px;
+    background-color: rgb(23, 162, 188);
+}
+.contener{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+.user-profile-img{
+    height: 80px;
+    width: 80px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    top: 56px;
+}
+.user-card-icon{
+    width: 10px;
+    
+}
+.ditals-div{
+    margin: 0 0 0 20px;
+    padding-top: 20px;
+}
+a{
+    color: rgb(8, 130, 229);
+}
