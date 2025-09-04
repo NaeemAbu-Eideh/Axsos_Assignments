@@ -1,0 +1,110 @@
+.header{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #CCCCCC;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+}
+
+.input-text{
+    width: 0;
+    height: 0;
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+#login-button{
+    background-color: #2B77E4;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 17px;
+    box-shadow: 2px 2px 2px 2px black;
+    border: 3px solid black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0 0;
+}
+
+
+.ninja{
+    border: 2px solid black;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px 20px;
+    margin: 25px 0 0 0;
+}
+
+.ninja-title{
+    font-size: 27px;
+}
+
+.ninja-plural{
+    width: 100px;
+}
+
+.ninja-type{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.ninga-discription{
+    margin: 0 20px 0 20px;
+    text-align: center;
+    font-size: 20px;
+
+}
+.ninga-links{
+    color: blue;
+}
+
+.like-button{
+    height: 30px;
+    width: 100px;
+    background-color: #FED966;
+    font-size: 16px;
+    border: 3px solid black;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.dojonary-div{
+    border: 2px solid black;
+    height: 130px;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.dojonary-defined{
+    font-size: 20px;
+}
+
+.you-span{
+    font-weight: bold;
+}
+
+::placeholder{
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.add-definition{
+    width: 160px;
+    height: 30px;
+    background-color: #92C47D;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid black;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.fontFamily{
+    font-family: "Balsamiq Sans", sans-serif;
+}

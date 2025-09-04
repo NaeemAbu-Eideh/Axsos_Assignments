@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <title>Button Clicker</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="dojonary-title fontFamily">Dojonary</h1>
+            <input type="text" class="input-text" placeholder="Search">
+            <button id="login-button" class="fontFamily" onclick="loginLogout()">Login</button>
+        </div>
+        <div class="container">
+            <div class="ninga-container">
+                <div class="ninja">
+                    <div class="ninga-details">
+                        <h2 class="ninja-title fontFamily">ninja</h2>
+                        <p class="ninja-type fontFamily">noun</p>
+                        <p class="ninja-plural fontFamily">Plural: <span class="ninja-type">ninjas</span></p>
+                        <button class="like-button fontFamily" onclick="printAlert()">13 likes</button>
+                    </div>
+                    <p class="ninga-discription fontFamily">A practitioner skilled in the <a href="#" class="ninga-links">Japanese</a> art of <a href="#" class="ninga-links">ninjutsu</a></p>
+                </div>
+                <div class="ninja">
+                    <div class="ninga-details">
+                        <h2 class="ninja-title fontFamily">ninja</h2>
+                        <p class="ninja-type fontFamily">noun</p>
+                        <p class="ninja-plural fontFamily">Plural: <span class="ninja-type">ninjas</span></p>
+                        <button class="like-button fontFamily" onclick="printAlert()">37 likes</button>
+                    </div>
+                    <p class="ninga-discription fontFamily">A <a href="#" class="ninga-links">programmer</a> who breaks down problemd with <a href="#" class="ninga-links">zen</a>-like focus</p>
+                </div>
+            </div>
+            <div class="dojonary-div">
+                <p class="dojonary-defined fontFamily">Dojonary is<br>defined by <span class="you-span">YOU</span></p>
+                <button class="add-definition fontFamily" id="addDefinition" onclick="hide()">Add Definition</button>
+            </div>
+        </div>
+        <script src="./javascript/code.js"></script>
+    </body>
+</html>
