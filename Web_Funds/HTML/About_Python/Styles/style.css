@@ -4,8 +4,13 @@
 }
 
 body{
-    background-color: #265175;
     overflow: hidden;
+}
+
+.container{
+    background-color: #265175;
+    width: 970px;
+    margin: 0 auto;
 }
 
 .white-color{
@@ -27,31 +32,39 @@ body{
     margin: 25px 25px 0 0;
 }
 
+.python-image{
+    width: 400px;
+    height: 100px;
+}
+
 .text_size-and-search_bar{
     text-align: center;
 }
 
 .text-size{
+    font-size: 13px;
     color: white;
-    margin: 0 0 10px 25px;
+    margin: 10px 0 10px 25px;
 }
 
 .or-line{ color: black;}
 
 .search-bar{
-    width: 300px;
+    width: 250px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 4px 4px 4px black;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #444444;
 }
 
 .search-input{
     height: 25px;
-    margin-right: 20px;
+    width: 130px;
+    height: 25px;
+    margin-right: 5px;
 }
 
 ::placeholder{
@@ -59,14 +72,13 @@ body{
 }
 
 .search_submit{
-    height: 30px;
-    width: 50px;
+    height: 25px;
+    width: 45px;
     background-color: #265175;
-    border-top: 3px solid #C0C0C0;
-    border-left: 3px solid #C0C0C0;
-    border-bottom: 3px solid #6C6C6C;
-    border-right: 3px solid #6C6C6C;
-    border-radius: 10px;
+    border-top: 2px solid #C0C0C0;
+    border-left: 2px solid #C0C0C0;
+    border-bottom: 2px solid #6C6C6C;
+    border-right: 2px solid #6C6C6C;
 }
 
 .navbar{
@@ -74,7 +86,7 @@ body{
     height: 50px;
     background-color: #467EAB;
     width: 85%;
-    margin: 0 auto 25px auto;
+    margin: 10px auto 25px auto;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 10px;
@@ -83,20 +95,19 @@ body{
 
 .navbar-links{
     text-decoration: none;
+    font-size: 20px;
 }
 
 .subjects-description{
     display: flex;
     justify-content: space-around;
-    margin-right: 25px;
-    padding-right: 25px;
+    margin: 0 0 0 25px;
 }
 
 .subjects{
     margin: 25px 0 0 0;
     padding-top: 25px;
     text-align: center;
-    flex: 1;
 }
 
 .subject-links{
@@ -110,22 +121,20 @@ body{
 }
 
 .description{
-    margin: 25px 25px 20px 0;
+    margin: 25px 0 25px 0;
     padding-right: 25px;
     text-align: center;
-    flex: 2;
 }
 
 .python-hestory{
-    width: 1100px;
-    margin: 0 25px 10px 0;
-    padding-right: 25px;
+    width: 610px;
+    margin: 0 0 10px 0;
     font-size: 16px;
     display: inline-block;
 }
 
 .better-than{
-    margin-bottom: 10px;
+    margin: 0 0 10px 25px;
     font-style: italic;
     font-size: 20px;
 } 
@@ -146,35 +155,22 @@ body{
 .started-application{
     display: flex;
     justify-content: center;
-
 }
 
-.getting-started, .application-div{
-    height: 380px;
-    width: 660px;
-    margin: 0 25px 0 0;
+.getting-started-div, .application-div{
+    width: 400px;
+    margin-left: 20px;
 }
 
 .started-header, .application-header{
-    height: 6px;
+    height: 5px;
     background-color: #75A8D3;
 }
 
-.started-title, .application-title{
-    margin-bottom: 4px;
-}
-
-.started-description, .application-description{
-    margin: 0 auto;
-    width: 500px;
-    margin-left: 25px;
-    padding-left: 25px;
-}
-
 .started-list, .application-list{
-    width: 250px;
-    position: relative;
-    left: 25%;
+    width: 230px;
+    margin: 0 auto;
+    list-style-type: square;
 }
 
 .footer{
