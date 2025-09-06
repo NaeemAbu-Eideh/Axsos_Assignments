@@ -1,105 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="style.CSS" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="./Style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="nav">
-            <div class="labl-links">
-                <h1 class="nav-title">Profile</h1>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#" class="active">My Profile</a></li>
-                    <li><a href="#">Find Connections</a></li>
+        <div class="header flex">
+            <div class="title-links flex">
+                <h1 class="title white-color font-familly">Profile</h1>
+                <ul class="header-links flex">
+                    <li><a href="#" class="header-link font-familly">Home</a></li>
+                    <li><a href="#" class="header-link white-color font-familly">My Profile</a></li>
+                    <li><a href="#" class="header-link font-familly">Find Connections</a></li>
                 </ul>
             </div>
-            <button class="btn">Sign Out</button>
+            <button class="sign-out white-color blue-background font-familly">Sign Out</button>
         </div>
-        <div class="contener">
-            <div class="card-education">
-                <div class="user-card">
-                    <div class="blue-div"></div>
-                    <div class="ditals-div">
-                        <img class="user-profile-img"src="./img/jane-m.jpg"alt="profilw img"/>
-                        <div class="user-ditals">
-                            <h2>Jone Doe</h2>
-                            <p>
-                                <img class="user-card-icon" src="icons/map-marker.png" alt="icon map">
-                                Seattle
-                            </p>
-                            <p>Developer i Engineer i Problem Solver<br>Master of shodows and the Internet!</p>
-                            <a href=""><img class="user-card-icon" src="icons/gear.png" alt="gear-img"> edit profile</a>
+        <div class="container flex">
+            <div class="userCard-education">
+                <div class="user-card border">
+                    <div class="blue-background user-card-header"></div>
+                    <div class="user-card-body">
+                        <div class="profile-image-div border">
+                            <img src="./img/jane-m.jpg" alt="Jane-Doe" class="profile-img">
+                        </div>
+                        <div class="profile-details">
+                            <h1 class="profile-name font-familly">Jane Doe</h1>
+                            <div class="location flex">
+                                <img src="./icons/map-marker.png" alt="map-marker" class="location-icon">
+                                <p class="location-name font-familly">Seatle</p>
+                            </div>
+                            <p class="profile-skills font-familly">Developer | Engineer | Problem Solver Master of Shadows and the Internet</p>
+                            <div class="edit-profile flex">
+                                <img src="./icons/gear.png" alt="gear" class="gear-icon">
+                                <a href="#" class="edit-profile-link font-familly">edit profile</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="educadtion">
-                    <div class="education-title">
-                        <h3 class="education-title">Education</h3>
+                <div class="education-div border">
+                    <div class="education-header black-background flex">
+                        <h3 class="education-title white-color font-familly">Education</h3>
                     </div>
-                    <div class="education-details">
-                        <p class="coding-dojo">Coding Dojo - Full Stack Bootcamp</p>
-                        <p class="education-date">Dec 2019 - Mar 2020</p>
-                        <p class="education-languages">Triple block built in python, MERN, and c#</p>
-                    </div>
+                    <p class="codding-dojo font-familly">Codding-Dojo Full Stack Bootcamp</p>
+                    <p class="codding-date font-familly">Dec 2019 - Mar 2020</p>
+                    <p class="font-familly cooding-languages">Triple black belt in Python, MERN, C#, ...</p>
                 </div>
             </div>
-            <div class="connection-your">
-                <div class="connection-requests">
-                    <div class="connection-requests-title">
-                        <div class="connection-requests-title-num">
-                            <h3>2</3>
-                        </div>
-                        <h3 class="connection-requests-title"> Connection Requests</h3>
+            <div class="connectionRequests-yourRequests">
+                <div class="connection-requests-div border">
+                    <div class="connection-requests-header black-background flex">
+                        <div class="requests-number white-color font-familly">2</div>
+                        <h3 class="connection-requests-title white-color font-familly">Connection Requests</h3>
                     </div>
-                    <div class="connection-requests-sh">
-                        <div class="connection-requests-show">
-                            <div class="conniction-user">
-                                <img class="img coniction-user-image" src="img/todd-s.jpg" alt="img"> 
-                                <p>Todd E</p>
-                            </div>
-                            <div>
-                                <img class="img" src="icons/accept-circle.png" alt="icon-troo">
-                                <img class="img" src="icons/close-circle.png" alt="fuls">
-                            </div>
+                    <div class="connection-request-div flex">
+                        <div class="connection-request-name flex">
+                            <img src="./img/todd-s.jpg" alt="todd-s" class="requests-user-image">
+                            <p class="requests-user-name font-familly">Todd E</p>
                         </div>
-                        <div class="connection-requests-show">
-                            <div class="conniction-user">
-                                <img class="img coniction-user-image" src="img/phil-s.jpg" alt="img">
-                                <p> Phil K</p>
-                            </div>
-                            <div>
-                                <img class="img" src="icons/accept-circle.png" alt="icon-troo">
-                                <img class="img" src="icons/close-circle.png" alt="fuls">
-                            </div>
+                        <div class="true-dalse-icons flex">
+                            <img src="./icons/accept-circle.png" alt="accept-citcle" class="connection-request-icons">
+                            <img src="./icons/close-circle.png" alt="close-circle" class="connection-request-icons">
+                        </div>
+                    </div>
+                    <div class="connection-request-div flex">
+                        <div class="connection-request-name flex">
+                            <img src="./img/phil-s.jpg" alt="phil-s" class="requests-user-image">
+                            <p class="requests-user-name font-familly">Phill K </p>
+                        </div>
+                        <div class="true-dalse-icons flex">
+                            <img src="./icons/accept-circle.png" alt="accept-citcle" class="connection-request-icons">
+                            <img src="./icons/close-circle.png" alt="close-circle" class="connection-request-icons">
                         </div>
                     </div>
                 </div>
-                <div class="your-requests">
-                    <div class="your-connections-header">
-                        <div class="number-of-ypur-conniction">500+</div>
-                        <h3 class="your-requests-title"> Your Requests</h3>
+                <div class="your-connections-div border">
+                    <div class="your-connections-header black-background flex">
+                        <div class="your-connections-number font-familly white-color">500+</div>
+                        <h3 class="white-color font-familly">Your Connections</h3>
                     </div>
-                    <div class="conniction-user your-conniction-users">
-                        <img class="img coniction-user-image" src="img/adrien-s.jpg" alt="img">
-                        <p> Adrien D</p>
+                    <div class="your-connection-name flex margin">
+                        <img src="./img/adrien-s.jpg" alt="adrien-s" class="requests-user-image">
+                        <p class="requests-user-name font-familly">Adrien D </p>
                     </div>
-                    <div class="conniction-user your-conniction-users">
-                        <img class="img coniction-user-image" src="img/anne-s.jpg" alt="img">
-                        <p> Anne J</p>
+                    <div class="your-connection-name flex margin">
+                        <img src="./img/anne-s.jpg" alt="anne-s" class="requests-user-image">
+                        <p class="requests-user-name font-familly">Anne J </p>
                     </div>
-                    <div class="conniction-user your-conniction-users">
-                        <img class="img coniction-user-image" src="img/alayne-s.jpg" alt="img">
-                        <p> Alayne T</p>
+                    <div class="your-connection-name flex margin">
+                        <img src="./img/alayne-s.jpg" alt="alayne-s" class="requests-user-image">
+                        <p class="requests-user-name font-familly">Alayne T </p>
                     </div>
-                    <div class="conniction-user your-conniction-users">
-                        <img class="img coniction-user-image" src="img/arry-s.jpg" alt="img">
-                        <p> Arry Y</p>
+                    <div class="your-connection-name flex margin">
+                        <img src="./img/arry-s.jpg" alt="arry-s" class="requests-user-image">
+                        <p class="requests-user-name font-familly">Arry Y</p>
                     </div>
-                    <div class="view-more">
-                        <a href="#" class="view-more-link">View More</a>
+                    <div class="view-more-div border flex">
+                        <a href="#" class="view-more font-familly">View More</a>
                     </div>
                 </div>
             </div>
