@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-content flex">
+                <h1 class="title balsamiq-font">Dojo Weather</h1>
+                <div class="links flex">
+                    <h2 class="link balsamiq-font" onclick="displayCityOnAlert(this)">Burbank</h2>
+                    <h2 class="link balsamiq-font" onclick="displayCityOnAlert(this)">Chicago</h2>
+                    <h2 class="link balsamiq-font" onclick="displayCityOnAlert(this)">Dallas</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="navbar flex">
+                <h2 class="san-joes balsamiq-font">San Jose</h2>
+                <div class="change-temperature">
+                    <label class="show-temperature balsamiq-font">show temperature in: </label>
+                    <select name="°C" class="combo-box temp-type" onchange="changeTempreture()">
+                        <option value="celsius" class="balsamiq-font temp-type">°C</option>
+                        <option value="fahrenheit" class="balsamiq-font temp-type">°F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="weather-tempreature flex">
+                <div class="weather-day-div">
+                    <p class="day-name balsamiq-font">Today</p>
+                    <img src="./images/some_rain.png" alt="some rain" class="weather-images">
+                    <p class="weather-conditions balsamiq-font">some rain</p>
+                    <div class="temperature-number-div">
+                        <p class="temperature-number balsamiq-font red-color">24°</p>
+                        <p class="temperature-number balsamiq-font blue-color">18°</p>
+                    </div>
+                </div>
+                <div class="weather-day-div">
+                    <p class="day-name balsamiq-font">Tomorrow</p>
+                    <img src="./images/some_sun.png" alt="some sun" class="weather-images">
+                    <p class="weather-conditions balsamiq-font">some sun</p>
+                    <div class="temperature-number-div">
+                        <p class="temperature-number balsamiq-font red-color">27°</p>
+                        <p class="temperature-number balsamiq-font blue-color">19°</p>
+                    </div>
+                </div>
+                <div class="weather-day-div">
+                    <p class="day-name balsamiq-font">Friday</p>
+                    <img src="./images/some_clouds.png" alt="some clouds" class="weather-images">
+                    <p class="weather-conditions balsamiq-font">some clouds</p>
+                    <div class="temperature-number-div">
+                        <p class="temperature-number balsamiq-font red-color">21°</p>
+                        <p class="temperature-number balsamiq-font blue-color">16°</p>
+                    </div>
+                </div>
+                <div class="weather-day-div saturday-wather">
+                    <p class="day-name balsamiq-font">Saterday</p>
+                    <img src="./images/some_sun.png" alt="some sun" class="weather-images">
+                    <p class="weather-conditions balsamiq-font">some sun</p>
+                    <div class="temperature-number-div">
+                        <p class="temperature-number balsamiq-font red-color">26°</p>
+                        <p class="temperature-number balsamiq-font blue-color">21°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cockie-div flex">
+                <div class="cockie-img-div">
+                    <img src="./images/cookie.png" alt="cookie" class="cockie-img">
+                </div>
+                <div class="cookie-description">
+                    <p class="cockie-time balsamiq-font">Stop! Cookie time</p>
+                    <p class="use-cookie balsamiq-font">We use cookies (sadly not the edible ones) to personalize content and ads. to provide social media features and to analyse our traffic.  to provide social media features and to analyse our traffic. and to analyse our traffic. <a href="#" class="read-more">Read more ...</a></p>
+                </div>
+                <button class="accept-cookie balsamiq-font" onclick="removeCokie(this)">I Accept</button>
+            </div>
+        </div>
+        <script src="./Javascript/code.js"></script>
+    </body>
+</html>

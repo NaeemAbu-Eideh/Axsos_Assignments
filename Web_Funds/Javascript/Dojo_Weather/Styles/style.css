@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.balsamiq-font{
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.blue-color{
+    color: #2B78E4;
+}
+
+.red-color{
+    color: #CF2A27;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    height: 100px;
+    color: white;
+    background-color: #9FC5F8;
+    position: relative;
+}
+
+.header-content{
+    justify-content: center;
+    justify-content: space-between;
+    width: 1300px;
+    position: absolute;
+    top: 25px;
+    left: 335px;
+}
+
+.title{
+    font-size: 40px;
+}
+
+.links{
+    margin-top: 5px;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.link{
+    font-size: 27px;
+}
+
+.container{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.navbar{
+    justify-content: space-between;
+}
+
+.san-joes{
+    margin: 10px 0 0 0;
+    font-size: 26px;
+}
+
+.change-temperature{
+    margin: 25px 0 0 0;
+}
+
+.show-temperature{
+    font-size: 17px;
+}
+
+.combo-box{
+    width: 50px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+.temp-type{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.border{
+    width: 1250px;
+    height: 3px;
+    background-color: #000000;
+    margin: 25px 0 25px 0;
+}
+
+.weather-day-div{
+    width: 300px;
+    height: 430px;
+    background-color: #EEEEEE;
+    margin: 0 16px 0 0;
+    display: block;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.saturday-wather{
+    margin-right: 0;
+    display: block;
+}
+
+.day-name{
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.weather-images{
+    border-radius: 50%;
+    width: 210px;
+    margin: 10px 0 25px 0;
+}
+
+.weather-conditions{
+    font-size: 25px;
+    margin: 10px 0 25px 0;
+}
+
+.temperature-number-div{
+    display: flex;
+    margin: 0 auto;
+    width: 150px;
+    justify-content: space-between;
+    font-size: 25px;
+    
+}
+
+.temperature-number{
+    margin: 10px 0 25px 0;
+}
+
+.cockie-div{
+    width: 1244px;
+    height: 180px;
+    border: 4px solid;
+}
+
+
+.cockie-img-div{
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.cockie-img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+
+.cookie-description{
+    width: 900px;
+    position: relative;
+    bottom: 20px;
+}
+
+.cockie-time{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.use-cookie{
+    font-size: 20px;
+
+}
+
+.accept-cookie{
+    height: 40px;
+    width: 100px;
+    border: 3px solid black;
+    box-shadow: 3px 3px 3px 3px black;
+    background-color: #9FC5F8;
+    margin-left: 25px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
