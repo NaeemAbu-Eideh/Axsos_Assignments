@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./Styles/style.css">
+    </head>
+
+    <body>
+        <div class="header flex">
+            <div class="title-logo-div flex">
+                <img src="./Screenshot (702).png" alt="logo" class="header-logo">
+                <div class="title-div">
+                    <p class="marsia">Marsia</p>
+                    <h1 class="title white-color">Basic-Calculator</h1>
+                </div>
+            </div>
+            <div class="header-buttons flex">
+                <button class="favorite-button white-color darkGray-background borderRadiua">&#10084</button>
+                <button class="source-code-button white-color darkGray-background marginLeft borderRadiua">Vew Sorce
+                    Page</button>
+                <button class="sign-up-button marginLeft borderRadiua">Sign Up</button>
+                <button class="login-button white-color darkGray-background marginLeft borderRadiua">Log in</button>
+            </div>
+        </div>
+        <div id="calculator">
+            <div id="display" class="white-color">0</div>
+            <div class="row">
+                <button onclick="press(7)">7</button>
+                <button onclick="press(8)">8</button>
+                <button onclick="press(9)">9</button>
+                <button class="operator white-color" onclick="setOP('/')">÷</button>
+            </div>
+            <div class="row">
+                <button onclick="press(4)">4</button>
+                <button onclick="press(5)">5</button>
+                <button onclick="press(6)">6</button>
+                <button class="operator white-color" onclick="setOP('*')">×</button>
+            </div>
+            <div class="row">
+                <button onclick="press(1)">1</button>
+                <button onclick="press(2)">2</button>
+                <button onclick="press(3)">3</button>
+                <button class="operator white-color" onclick="setOP('-')">−</button>
+            </div>
+            <div class="row">
+                <button onclick="clr()">C</button>
+                <button onclick="press(0)">0</button>
+                <button onclick="press('.')">.</button>
+                <button class="operator white-color" onclick="setOP('+')">+</button>
+            </div>
+            <div class="row">
+                <button id="equals" onclick="calculate()" class="white-color">=</button>
+            </div>
+        </div>
+        <div>
+        <script src="./Javascript/code.js"></script>    
+    </body>
+
+</html>

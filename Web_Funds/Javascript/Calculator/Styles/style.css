@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex{
+    display: flex;
+}
+
+.header{
+    margin: 0 auto;
+    background-color: #010101;
+    justify-content: space-between;
+    width: 60%;
+    height: 78px;
+    padding: 0 25px 0 25px;
+}
+
+.header-logo{
+    width: 70px;
+    height: 70px;
+    padding-right: 5px;
+}
+
+.marsia{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #A5A2A5;
+}
+
+.marsia:hover{
+    color: white;
+}
+
+.darkGray-background{
+    background-color: #444857;
+}
+
+.darkGray-background:hover{
+    background-color: #5A5F73;
+}
+
+.white-color{
+    color: white;
+}
+
+.title{
+    font-size: 26px;
+}
+
+.header-buttons{
+
+    align-items: center;
+}
+
+.marginLeft{
+    margin-left: 6px;
+}
+
+.borderRadiua{
+    border: 1px solid #5A5F73;
+    border-radius: 10px;
+}
+
+.favorite-button{
+    width: 55px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.source-code-button{
+    width: 200px;
+    height: 50px;
+}
+
+.sign-up-button{
+    background-color: #47CF73;
+    width: 80px;
+    height: 50px;
+    border-color: #47CF73;
+}
+
+.sign-up-button:hover{
+    background-color: #248C46;
+    color: white;
+    border-color: #248C46;
+}
+
+.login-button{
+    width: 80px;
+    height: 50px;
+}
+
+#calculator{
+    width: 350px;
+    position: relative;
+    left: 840px;
+    top: 20px;
+    background-color: #222222;
+    padding: 4px 0 20px 0;   
+}
+
+#display{
+    margin: 20px auto 20px auto;
+    width: 300px;
+    font-size: 40px;
+    text-align: end;
+    padding-right: 25px;
+}
+
+.row{
+    width: 320px;
+    margin: 5px auto 20px auto;
+}
+
+.row button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 0 5px 0 11px;
+    background-color: #666666;
+    border: 1px solid #666666;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.row button:active{
+    background-color: #999999;
+}
+
+.row .operator{
+    background-color: #FF8C00;
+    border: 1px solid #FF8C00;
+}
+
+.row .operator:active{
+    background-color: #FFA500;
+}
+
+#equals{
+    width: 270px;
+    margin-left: 25px;
+    background-color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+}
+
+#equals:active{
+    background-color: #EEEEEE;
+}
