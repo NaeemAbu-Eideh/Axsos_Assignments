@@ -1,0 +1,26 @@
+create database Assignment1;
+
+use assignment1
+
+CREATE TABLE students (
+	id INT primary key auto_increment,
+	first_name nvarchar(25),
+	last_name nvarchar(25),
+	phone_number nvarchar(14),
+	created_at datetime,
+	updated_at datetime
+)
+
+
+insert into students (first_name, last_name, phone_number,created_at, updated_at) values ('naeem', 'abueideh', '0598123123', '2025-09-12 14:00:00', now());
+
+insert into students (first_name, last_name, phone_number,created_at, updated_at) values ('ali', 'mohamd', '0598123124', '2025-09-12 14:00:00', now());
+
+select * from students;
+
+select * from students where first_name = "naeem";
+
+update students set first_name = "amen", last_name = "abueideh", updated_at = Now() where id = 2;
+
+delete from students where id = 2;
+
