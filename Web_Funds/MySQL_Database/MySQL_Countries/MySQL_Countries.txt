@@ -1,0 +1,18 @@
+use world;
+
+
+1. select countries.name, languages.language, languages.percentage  from  (countries inner join languages on languages.country_id = countries.id) where languages.language = "Slovene" order by languages.percentage desc;
+
+2. select countries.name, count(cities.name) as number_of_cities from (countries inner join cities on countries.id = cities.country_id) group by countries.name order by number_of_cities desc;
+
+3. select cities.name as mexico_city_name, cities.population, cities.country_id from (countries inner join cities on countries.id = cities.country_id)  where countries.name = "Mexico" and cities.population > 500000 order by cities.population desc;
+
+4. select countries.name, languages.language, languages.percentage  from  (countries inner join languages on languages.country_id = countries.id) where languages.percentage > 89 order by languages.percentage desc;
+
+5. select countries.name, countries.surface_area, cities.population  from  (countries inner join cities on cities.country_id = countries.id) where countries.surface_area < 501 and cities.population >s 100000;
+
+6. select name, government_form, capital, life_expectancy from countries where government_form = "Constitutional Monarchy" and capital > 200 and life_expectancy > 75;
+
+7. select countries.name, cities.name, cities.district, cities.population from (countries inner join cities on countries.id = cities.country_id) where countries.name = "Argentina" and cities.district = "Buenos Aires" and cities.population > 500000;
+
+8. select region, count(name) as countries from countries group by region order by countries desc;
