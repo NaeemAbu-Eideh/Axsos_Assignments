@@ -1,0 +1,91 @@
+------------------------------Create Database-------------------------------------------------------------------------
+
+create database friendship;
+
+use friendship;
+
+------------------------------Create Tables---------------------------------------------------------------------------
+
+create table users (
+     id int primary key auto_increment, 
+	 first_name varchar(45) not null,
+     last_name varchar(45) not null,
+     created_at datetime not null,
+     updated_at datetime not null
+)
+
+
+create table friendships (
+     id int primary key auto_increment, 
+	 user_id int not null,
+     friend_id int not null,
+     created_at datetime not null,
+     updated_at datetime not null,
+     foreign key(user_id) references users(id),
+     foreign key(friend_id) references users(id)
+)
+
+-------------------------------Insert Data---------------------------------------------------------------------------
+1. 
+
+insert into users (first_name, last_name, created_at, updated_at) values ("Amy", "Giver", "2025-9-15", "2025-9-15");
+
+insert into users (first_name, last_name, created_at, updated_at) values ("Eli", "Byers", "2025-9-15", "2025-9-15");
+
+insert into users (first_name, last_name, created_at, updated_at) values ("Marky", "Mark", "2025-9-15", "2025-9-15");
+
+insert into users (first_name, last_name, created_at, updated_at) values ("Big", "Bird", "2025-9-15", "2025-9-15");
+
+insert into users (first_name, last_name, created_at, updated_at) values ("Kermit", "The Frog", "2025-9-15", "2025-9-15");
+
+insert into users (first_name, last_name, created_at, updated_at) values ("naeem", "abueideh", "2025-9-15", "2025-9-15");
+
+2.
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (1, 2, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (1, 4, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (1, 6, "2025-9-15", "2025-9-15");
+
+3.
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (2, 1, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (2, 3, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (2, 5, "2025-9-15", "2025-9-15");
+
+4.
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (3, 2, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (3, 5, "2025-9-15", "2025-9-15");
+
+5. 
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (4, 3, "2025-9-15", "2025-9-15");
+
+6.
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (5, 1, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (5, 6, "2025-9-15", "2025-9-15");
+
+7.
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (6, 2, "2025-9-15", "2025-9-15");
+
+insert into friendships (user_id, friend_id, created_at, updated_at) values (6, 3, "2025-9-15", "2025-9-15");
+
+----------------------------------------------------Select-----------------------------------------------------------
+
+8. SELECT users.first_name, users.last_name, user2.first_name as friend_first_name, user2.last_name as friend_last_name FROM users JOIN friendships ON users.id = friendships.user_id LEFT JOIN users as user2 ON user2.id = friendships.friend_id;
+
+9. SELECT users.first_name, users.last_name, user2.first_name as friend_first_name, user2.last_name as friend_last_name FROM users JOIN friendships ON users.id = friendships.user_id LEFT JOIN users as user2 ON user2.id = friendships.friend_id where users.id = 1;
+
+10. SELECT users.first_name, users.last_name, count(user2.id) as number_of_friends FROM users JOIN friendships ON users.id = friendships.user_id LEFT JOIN users as user2 ON user2.id = friendships.friend_id group by users.id;
+
+11. SELECT users.first_name, users.last_name, count(user2.id) as number_of_friends FROM users JOIN friendships ON users.id = friendships.user_id LEFT JOIN users as user2 ON user2.id = friendships.friend_id group by users.id order by count(user2.id) desc  limit 1; 
+
+12. SELECT users.first_name, users.last_name, user2.first_name as friend_first_name, user2.last_name as friend_last_name FROM users JOIN friendships ON users.id = friendships.user_id LEFT JOIN users as user2 ON user2.id = friendships.friend_id order by concat(users.first_name, "" , users.last_name) asc LIMIT 1 OFFSET 2; 
