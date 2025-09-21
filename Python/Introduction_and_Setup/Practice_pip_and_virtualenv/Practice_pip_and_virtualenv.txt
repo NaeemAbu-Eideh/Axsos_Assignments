@@ -1,0 +1,19 @@
+pip list: display all installed pakages inside the cyrrent Python enviroment(for Wendows).
+
+deactivate: to close the enviroment (we used it when we want to stop working with a project and start with another project with another enviroment).
+
+pip3 list: display all installed pakages inside the cyrrent Python enviroment(for Mac/Lenux).
+
+source myEnvaironments/py3Env/bin/activate: we use this command in git batch in Lenux and Mac to activate the environment and start work.
+
+call myEnvaironments/py3Env/bin/activate: we use this command in cmd in Windows to activate the environment and start work.
+
+pip install Django==2.2.4: when we run this command, it will download the Django framework on the directory, and it download other libraries with it.
+
+pip freeze: it will display all pakages in python like list, but in this format: python_pakage==pakage_version, however the pip list display it with another format like table.
+
+pip uninstall Django: delete Django framework from target directory.
+
+pip show Django: if Django does not installed, it will give this: WARNING: Package(s) not found: Django, else if it installed it give: Django name, version, summary, home-page, auther, auther-email, license, location, requiers, and required-by
+
+
