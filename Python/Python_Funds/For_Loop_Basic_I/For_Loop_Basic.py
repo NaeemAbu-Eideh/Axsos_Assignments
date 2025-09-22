@@ -4,7 +4,8 @@ for i in range (0, 150):
 
 # Multible of Five
 for i in range (5, 1000):
-    print(f"{i}*5 = {i*5}")
+    if(i % 5 == 0):
+        print(i)
 
 # print from 1 to 100, division by 5: Codding , if division by 10: Coding Dojo
 for i in range (1, 100):
