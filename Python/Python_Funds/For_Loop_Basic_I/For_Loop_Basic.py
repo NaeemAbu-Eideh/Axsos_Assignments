@@ -1,14 +1,13 @@
 # Basic
-for i in range (0, 150):
+for i in range (0, 151):
     print(f"number is: {i}")
 
 # Multible of Five
-for i in range (5, 1000):
-    if(i % 5 == 0):
-        print(i)
+for i in range (5, 1001):
+    print(f"{i}*5 = {i*5}")
 
 # print from 1 to 100, division by 5: Codding , if division by 10: Coding Dojo
-for i in range (1, 100):
+for i in range (1, 101):
     if i % 10 == 0 :
         print("Coding Dojo")
     elif i % 5 == 0:
@@ -18,7 +17,7 @@ for i in range (1, 100):
 
 # summ of all odd integers from 0 to 500000
 sum = 0
-for i in range(0, 500000):
+for i in range(0, 500001):
     if i % 2 == 1:
         sum += i
 print(f"sum of all odd numbers from 0 to 500000 is: {sum}")

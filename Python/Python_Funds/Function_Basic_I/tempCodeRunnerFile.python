@@ -1,0 +1,13 @@
+
+def a():
+    print(1)
+    x = b()
+    print(x)
+    return 10
+print(a())
+def b():
+    print(3)
+    return 5
+y = a() # first print 1, then call function b , print 3 and store 5 in var named x, then print x that value = 5, finaly return 10 and store it in y variable
+print(y) # print 10
+
