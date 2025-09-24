@@ -20,6 +20,6 @@ class MathDojo:
 
 x = MathDojo(10)
 print(x.add(1,3,3).add(1,3).add(3,4,5,6).result)
-print(x.subtract(1,3,3).subtract(1).subtract(3,5,6).result)
+print(x.subtract(1,3,3).subtract(1,3).subtract(3,5,6).result)
 
 
