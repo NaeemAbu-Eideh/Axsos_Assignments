@@ -1,0 +1,9 @@
+Inheritance: I built a class named Library that 
+contain all atribute and arguments that i will use it in 
+other classes, then I built three classes named (Book, DVD, Magazine)
+and make it subclasses that inheret from library, then i give each 
+subclass a unique arguments.
+
+
+Polymorphism: I use override in class functions named 
+overdue_notification and late_fee_calculation, each function return the defirrent value, so I make it override
