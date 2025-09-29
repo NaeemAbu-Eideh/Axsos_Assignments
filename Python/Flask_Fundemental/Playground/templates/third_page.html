@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='third_page.css') }}">
+    <link rel="stylesheet" href="../static/third_page.css">
+</head>
+
+<body>
+    <div class="relativ">
+        <h1 class="title">Welcome!</h1>
+        <div class="container">
+            {%for i in range(num) %}
+            <div class="buetifull-box" style="--c: {{color}}"></div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+
+</html>

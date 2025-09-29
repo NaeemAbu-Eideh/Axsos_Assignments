@@ -1,0 +1,23 @@
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container{
+    width: 1700px;
+    margin: 25px auto 0 auto;
+}
+
+.buetifull-box{
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.relativ{
+    position: relative;
+    top: 60px;
+}
