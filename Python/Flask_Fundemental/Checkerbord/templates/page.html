@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% for i in range(num1) %}
+    <div class="flex">
+        {% for j in range(num2) %}
+        {% if( (i+j) % 2 ) == 0 %}
+        <div class="white" style="--c: {{color1}}"></div>
+        {% else %}
+        <div class="black" style="--c: {{color2}}"></div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</body>
+</html>

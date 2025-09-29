@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+}
+
+.white, .black{
+    width: 100px;
+    height: 100px;
+}
+
+.black{
+    background-color: var(--c);
+}
+
+.white{
+    background-color: var(--c);
+}
