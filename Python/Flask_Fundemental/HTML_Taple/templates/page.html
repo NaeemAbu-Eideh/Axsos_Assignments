@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <table class="list border mt-10 mb-10 mr-auto ml-auto">
+        <tr class="headers border">
+            <th class="header border pt-5 pb-5 pr-20 pl-20">First Name</th>
+            <th class="header border pt-5 pb-5 pr-20 pl-20">Last Name</th>
+            <th class="header border pt-5 pb-5 pr-20 pl-20">Full Name</th>
+        </tr>
+        {% for i in list %}
+        <tr class="records border">
+            <td class="border pt-5 pb-5 pr-20 pl-20">{{i['first_name']}}</td>
+            <td class="border pt-5 pb-5 pr-20 pl-20">{{i['last_name']}}</td>
+            <td class="border pt-5 pb-5 pr-20 pl-20">{{i['first_name']}} {{i['last_name']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </h1>
+</body>
+</html>
