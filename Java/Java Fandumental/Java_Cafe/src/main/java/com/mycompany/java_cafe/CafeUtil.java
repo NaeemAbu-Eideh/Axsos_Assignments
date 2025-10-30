@@ -4,6 +4,7 @@
  */
 package com.mycompany.java_cafe;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author Naeem Abu-Eideh
@@ -48,7 +49,12 @@ public class CafeUtil {
     //======================================
     void addCustomer(ArrayList<String> customers){
          System.out.println("Enter your name please");
-         String username = System.console().readLine();
+         //String username = System.console().readLine();
+         Scanner input = new Scanner(System.in);
+         System.out.print("enter your name: ");
+         String username = input.next();
+         System.out.println();
+         
          System.out.println("Hello " + username);
          System.out.print("There are ");
          System.out.print( customers.size());
