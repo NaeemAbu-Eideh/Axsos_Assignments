@@ -12,19 +12,7 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-    div{
-        display: flex;
-        justify-content: space-between;
-        width: 400px;
-        margin: 20px auto;
-    }
-
-    a {
-       font-size: 25px;
-       padding: 25px;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/index_style.css">
 </head>
 <body>
 <div>

@@ -13,15 +13,7 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        p {
-            font-size: 24px;
-            color: #333;
-            display: block;
-            text-align: center;
-            padding: 25px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/date_style.css">
 </head>
 <body>
 <p><c:out value="${date}"/></p>
