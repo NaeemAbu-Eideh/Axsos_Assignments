@@ -17,5 +17,6 @@
 </head>
 <body>
 <p><c:out value="${date}"/></p>
+<script src="/js/date.js"></script>
 </body>
 </html>
