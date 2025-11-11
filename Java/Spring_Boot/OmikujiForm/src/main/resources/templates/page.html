@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <h1 class="text-center mt-10 text-3xl font-bold">Send an Omikuji!</h1>
+        <form action="/omikuji/set_data" method="post" class="border w-100 mx-auto mt-10">
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block">Pic any number between 5 and 25</label>
+                <input type="number" name="num" class="border w-10" min="5" max="25">
+
+            </div>
+
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block">Enter the name of the city</label>
+                <input type="text" name="city" class="border w-30">
+            </div>
+
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block">Enter the name of the real person</label>
+                <input type="text" name="name" class="border w-30">
+            </div>
+
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block">Enter professional endeavor or hoppy:</label>
+                <input type="text" name="end_hop" class="border w-30">
+            </div>
+
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block">Enter any type of living thing:</label>
+                <input type="text" name="type" class="border w-30">
+            </div>
+
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block">Say something nice to someone:</label>
+                <textarea name="nice" class="border w-30 h-20"></textarea>
+            </div>
+
+            <div class="mt-4 mb-5 ml-5 font-bold">
+                <label class="block italic">Send and show the friend</label>
+                <button type="submit" class="block ml-auto mr-5 mt-3 border px-3">Send</button>
+            </div>
+        </form>
+    </body>
+</html>
