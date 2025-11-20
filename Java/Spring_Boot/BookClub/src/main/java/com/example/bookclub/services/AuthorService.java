@@ -1,0 +1,49 @@
+package com.example.bookclub.services;
+
+import com.example.bookclub.models.Author;
+import com.example.bookclub.models.AuthorLogin;
+import com.example.bookclub.repositories.AuthorRepository;
+import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
+
+import java.util.Optional;
+
+@Service
+public class AuthorService {
+    @Autowired
+    AuthorRepository authorRepository;
+
+    public Author saveAuthor(Author author){
+        return authorRepository.save(author);
+    }
+
+    public Author findAuthorByEmail(String email){
+        Optional<Author> result = authorRepository.findByEmail(email);
+        return result.orElse(null);
+    }
+
+    public Author findAuthorById(Long id){
+        Optional<Author> result = authorRepository.findById(id);
+        return result.orElse(null);
+    }
+
+    public Author checkAuthor(Author author, AuthorLogin authorLogin, BindingResult result){
+        if(author == null){
+            result.rejectValue("email", "error.email", "The email is not found");
+            return null;
+        }
+
+        else if(!author.getEmail().equals(authorLogin.getEmail())){
+            result.rejectValue("email", "error.email", "email or password is incorrect");
+            return null;
+        }
+
+        else if(!BCrypt.checkpw(authorLogin.getPassword(), author.getPassword())){
+            result.rejectValue("email", "error.email", "email or password is incorrect");
+            return null;
+        }
+        return author;
+    }
+}
