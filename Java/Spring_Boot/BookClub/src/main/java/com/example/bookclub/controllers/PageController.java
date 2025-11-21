@@ -51,6 +51,19 @@ public class PageController {
         if(result.hasErrors()){
             return "login_register.jsp";
         }
+
+        Author check = authorService.isFound(author.getEmail(), result);
+
+        if(check != null){
+            return "login_register.jsp";
+        }
+
+        boolean isMatch = authorService.isMatch(author.getPassword(), author.getConfirmPassword());
+        if(!isMatch){
+            result.rejectValue("password", "register", "the password and confirm password does not match");
+            return "login_register.jsp";
+        }
+
         String password = BCrypt.hashpw(author.getPassword(), BCrypt.gensalt());
         author.setPassword(password);
         Author target = authorService.saveAuthor(author);
@@ -132,8 +145,6 @@ public class PageController {
         Author author = authorService.findAuthorById((Long)session.getAttribute("user_id"));
         book.setAuthor(author);
         Book target =bookService.saveBook(book);
-//        author.getBooks().add(target);
-//        authorService.saveAuthor(author);
         return "redirect:/books/" + target.getId();
     }
 

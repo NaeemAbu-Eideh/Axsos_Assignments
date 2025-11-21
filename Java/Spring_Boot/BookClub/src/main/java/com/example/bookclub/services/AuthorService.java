@@ -46,4 +46,20 @@ public class AuthorService {
         }
         return author;
     }
+
+    public boolean isMatch(String password, String confirmPassword){
+        return password.equals(confirmPassword);
+    }
+
+    public Author isFound(String email, BindingResult result){
+        Optional<Author> target = authorRepository.findByEmail(email);
+        if(target.isPresent()){
+            result.rejectValue("email", "register", "this email is already taken, choose another one");
+            return target.get();
+        }
+        return null;
+    }
+
+
+
 }

@@ -27,19 +27,19 @@
         </div>
 
         <p class="mt-10 w-400 mx-auto text-[1.3em] pb-3 border-b-2 border-black mb-10"> <span class="text-red-500">
-            <c:if test="${author.name == book.author.name}">
+            <c:if test="${author.email == book.author.email}">
                 You
             </c:if>
-            <c:if test="${author.name != book.author.name}">
+            <c:if test="${author.email != book.author.email}">
                 <c:out value="${book.author.name}"/>
             </c:if>
             </span> read <span class="text-[#A116FE]"><c:out value="${book.title}"/></span> by <span class="text-[#49B954]">
             <c:out value="${book.authorName}"/>.
         </span> Here are <span>
-            <c:if test="${author.name == book.author.name}">
+            <c:if test="${author.email == book.author.email}">
                 your
             </c:if>
-            <c:if test="${author.name != book.author.name}">
+            <c:if test="${author.email != book.author.email}">
                 <c:out value="${book.author.name}"/>'s
             </c:if>
             </span> thoughts.
@@ -47,7 +47,7 @@
 
         <p class="w-400 mx-auto mb-10 pb-3 border-b-2 border-black text-[1.5em]"> <c:out value="${book.thought}"/> </p>
 
-        <c:if test="${ author.name == book.author.name }">
+        <c:if test="${ author.email == book.author.email }">
             <div class="w-400 mx-auto">
                 <a class="border ml-10 px-4 py-2" href= <c:out value="/books/${book.id}/edit"/>> Edit </a>
                 <a class="border ml-10 px-4 py-2" href= <c:out value="/books/${book.id}/delete"/>> Delete </a>
