@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
-    <body>
+    <body class="overflow-y-hidden">
         <div class="w-300 mx-auto mt-15">
             <h1 class="text-4xl font-bold text-[#9900FF]">Book Club</h1>
             <p class="mt-5 text-[1.3em]">A place for friends to share thoughts on books</p>
@@ -58,14 +58,14 @@
                 <p class="text-4xl font-bold">Log in</p>
                 <form:form cssClass="mt-4" action="/login" method="post" modelAttribute="login">
                     <div class="w-150 mb-6">
-                        <p class="mb-4"><form:errors path="email" cssClass="text-red-700"/></p>
-                        <form:label path="email" cssClass="mr-20">Email: </form:label>
-                        <form:input path="email" cssClass="border py-2"/>
+                        <p class="mb-4"><form:errors path="emailLogin" cssClass="text-red-700"/></p>
+                        <form:label path="emailLogin" cssClass="mr-20">Email: </form:label>
+                        <form:input path="emailLogin" cssClass="border py-2"/>
                     </div>
                     <div class="w-150 mb-6">
-                        <p class="mb-4"><form:errors path="password" cssClass="text-red-700"/></p>
-                        <form:label path="password" cssClass="mr-20">Password: </form:label>
-                        <form:input type="password" path="password" cssClass="border py-2"/>
+                        <p class="mb-4"><form:errors path="passwordLogin" cssClass="text-red-700"/></p>
+                        <form:label path="passwordLogin" cssClass="mr-20">Password: </form:label>
+                        <form:input type="password" path="passwordLogin" cssClass="border py-2"/>
                     </div>
                     <input type="submit" class="border px-3 px-5 font-bold block ml-30 mb-6">
                 </form:form>

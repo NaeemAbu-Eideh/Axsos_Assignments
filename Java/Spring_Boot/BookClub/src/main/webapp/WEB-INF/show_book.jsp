@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
-    <body>
+    <body class="overflow-y-hidden">
         <div class="flex justify-between items-center w-400 mx-auto my-10">
             <h1 class="text-3xl font-bold italic"> <c:out value="${book.authorName}"/> </h1>
             <a class="underline text-[1.3em] text-blue-700" href= <c:out value="/books"/> > Back to my shelves</a>

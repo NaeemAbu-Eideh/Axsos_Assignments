@@ -31,17 +31,17 @@ public class AuthorService {
 
     public Author checkAuthor(Author author, AuthorLogin authorLogin, BindingResult result){
         if(author == null){
-            result.rejectValue("email", "error.email", "The email is not found");
+            result.rejectValue("emailLogin", "error.emailLogin", "The email is not found");
             return null;
         }
 
-        else if(!author.getEmail().equals(authorLogin.getEmail())){
-            result.rejectValue("email", "error.email", "email or password is incorrect");
+        else if(!author.getEmail().equals(authorLogin.getEmailLogin())){
+            result.rejectValue("emailLogin", "error.emailLogin", "email or password is incorrect");
             return null;
         }
 
-        else if(!BCrypt.checkpw(authorLogin.getPassword(), author.getPassword())){
-            result.rejectValue("email", "error.email", "email or password is incorrect");
+        else if(!BCrypt.checkpw(authorLogin.getPasswordLogin(), author.getPassword())){
+            result.rejectValue("emailLogin", "error.emailLogin", "email or password is incorrect");
             return null;
         }
         return author;

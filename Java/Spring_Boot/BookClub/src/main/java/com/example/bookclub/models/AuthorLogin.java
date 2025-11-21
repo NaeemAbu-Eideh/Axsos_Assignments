@@ -19,16 +19,16 @@ public class AuthorLogin {
         this.emailLogin = email;
         this.passwordLogin = password;
     }
-    public String getEmail() {
+    public String getEmailLogin() {
         return emailLogin;
     }
-    public void setEmail(String email) {
+    public void setEmailLogin(String email) {
         this.emailLogin = email;
     }
-    public String getPassword() {
+    public String getPasswordLogin() {
         return passwordLogin;
     }
-    public void setPassword(String password) {
+    public void setPasswordLogin(String password) {
         this.passwordLogin = password;
     }
 

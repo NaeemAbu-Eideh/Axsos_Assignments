@@ -86,7 +86,7 @@ public class PageController {
         if(result.hasErrors()){
             return "login_register.jsp";
         }
-        Author target = authorService.checkAuthor(authorService.findAuthorByEmail(authorLogin.getEmail()), authorLogin, result);
+        Author target = authorService.checkAuthor(authorService.findAuthorByEmail(authorLogin.getEmailLogin()), authorLogin, result);
         if(target == null){
             return "login_register.jsp";
         }
