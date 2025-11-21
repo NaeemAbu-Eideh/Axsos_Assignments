@@ -41,8 +41,8 @@
                         <option value= <c:out value="${product.id}"/>> <c:out value="${product.name}"/></option>
                     </c:if>
                 </c:forEach>
+                <option value="-1">no products</option>
             </select>
-
             <input type="submit" value="Add" class="block border py-3 text-center w-400 mx-auto mt-3">
         </form>
     </body>

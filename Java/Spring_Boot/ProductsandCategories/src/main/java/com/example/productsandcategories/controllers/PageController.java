@@ -95,6 +95,9 @@ public class PageController {
             @PathVariable("id") Long id,
             @RequestParam(name = "category_id") Long category_id
     ){
+        if(category_id == -1){
+            return "redirect:/products/" + id;
+        }
         System.out.println("category_id = " + category_id);
         if(category_id == null){
             return "redirect:/products/" + id;
@@ -128,6 +131,9 @@ public class PageController {
             @PathVariable("id") Long id,
             @RequestParam(name = "product_id") Long product_id
     ){
+        if(id == -1){
+            return "redirect:/categories/" + id;
+        }
         Category category = categoryService.getCategoryById(id);
         Product product = productService.getProductById(product_id);
         category.getProducts().add(product);
