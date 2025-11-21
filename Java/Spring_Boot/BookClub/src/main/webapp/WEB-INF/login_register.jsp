@@ -27,51 +27,47 @@
         </div>
 
         <div class="flex justify-between w-300 mx-auto mt-10">
-            <div>
+            <div class="w-150">
                 <p class="text-4xl font-bold mb-8">Register</p>
                 <form:form cssClass="mt-4" action="/register" method="post" modelAttribute="register">
-                    <div class="flex justify-between w-100 mb-6">
-                        <form:label path="name">Name: </form:label>
+                    <div class="w-150 mb-6">
+                        <p class="mb-4 mt-5"><form:errors path="name" cssClass="text-red-700 "/></p>
+                        <form:label path="name" cssClass="mr-20">Name: </form:label>
                         <form:input path="name" cssClass="border py-2"/>
                     </div>
-                    <div class="flex justify-between w-100 mb-6">
-                        <form:label path="email">Email: </form:label>
+                    <div class="w-150 mb-6">
+                        <p class="mb-4"><form:errors path="email" cssClass="text-red-700"/></p>
+                        <form:label path="email" cssClass="mr-20">Email: </form:label>
                         <form:input path="email" cssClass="border py-2"/>
                     </div>
-                    <div class="flex justify-between w-100 mb-6">
-                        <form:label path="password">Password: </form:label>
+                    <div class="w-150 mb-6">
+                        <p class="mb-4"><form:errors path="password" cssClass="text-red-700"/></p>
+                        <form:label path="password" cssClass="mr-20">Password: </form:label>
                         <form:input type="password" path="password" cssClass="border py-2"/>
                     </div>
-                    <div class="flex justify-between w-100 mb-6">
-                        <form:label path="confirmPassword">Confirm Password: </form:label>
+                    <div class="w-150 mb-6">
+                        <p class="mb-4"><form:errors path="confirmPassword" cssClass="text-red-700"/></p>
+                        <form:label path="confirmPassword" cssClass="mr-20">Confirm Password: </form:label>
                         <form:input type="password" path="confirmPassword" cssClass="border py-2"/>
                     </div>
                     <input type="submit" class="border px-3 px-5 font-bold block ml-30 mb-6">
-                    <div class="w-100">
-                        <p class="mb-4 mt-5"><form:errors path="name" cssClass="text-red-700 "/></p>
-                        <p class="mb-4"><form:errors path="email" cssClass="text-red-700"/></p>
-                        <p class="mb-4"><form:errors path="password" cssClass="text-red-700"/></p>
-                        <p class="mb-4"><form:errors path="confirmPassword" cssClass="text-red-700"/></p>
-                    </div>
                 </form:form>
             </div>
 
             <div>
                 <p class="text-4xl font-bold">Log in</p>
                 <form:form cssClass="mt-4" action="/login" method="post" modelAttribute="login">
-                    <div class="flex justify-between w-100 mb-6">
-                        <form:label path="email">Email: </form:label>
+                    <div class="w-150 mb-6">
+                        <p class="mb-4"><form:errors path="email" cssClass="text-red-700"/></p>
+                        <form:label path="email" cssClass="mr-20">Email: </form:label>
                         <form:input path="email" cssClass="border py-2"/>
                     </div>
-                    <div class="flex justify-between w-100 mb-6">
-                        <form:label path="password">Password: </form:label>
+                    <div class="w-150 mb-6">
+                        <p class="mb-4"><form:errors path="password" cssClass="text-red-700"/></p>
+                        <form:label path="password" cssClass="mr-20">Password: </form:label>
                         <form:input type="password" path="password" cssClass="border py-2"/>
                     </div>
                     <input type="submit" class="border px-3 px-5 font-bold block ml-30 mb-6">
-                    <div class="w-100">
-                        <p class="mb-4"><form:errors path="email" cssClass="text-red-700"/></p>
-                        <p class="mb-4"><form:errors path="password" cssClass="text-red-700"/></p>
-                    </div>
                 </form:form>
             </div>
         </div>
