@@ -38,7 +38,7 @@ public class PageController {
 
     @GetMapping("/register")
     public String returnToLoginRegister(){
-        return "redirect:";
+        return "redirect:/";
     }
 
     @PostMapping("/register")
@@ -73,7 +73,7 @@ public class PageController {
 
     @GetMapping("/login")
     public String goToLoginRegister(){
-        return "redirect:";
+        return "redirect:/";
     }
 
     @PostMapping("/login")
@@ -100,7 +100,7 @@ public class PageController {
             Model model
     ){
         if(session.getAttribute("user_id") == null) {
-            return "redirect:";
+            return "redirect:/";
         }
         Author author = authorService.findAuthorById((Long)session.getAttribute("user_id"));
         List<Book> books = bookService.findAllBooks();
@@ -114,7 +114,7 @@ public class PageController {
             HttpSession session
     ){
         session.removeAttribute("user_id");
-        return "redirect:";
+        return "redirect:/";
     }
 
     @GetMapping("/books/new")
@@ -123,13 +123,16 @@ public class PageController {
             HttpSession session
     ){
         if(session.getAttribute("user_id") == null) {
-            return "redirect:";
+            return "redirect:/";
         }
         return "add_book.jsp";
     }
 
     @GetMapping("/books/new/add")
-    public String returnToAddBook(@ModelAttribute("books") Book book){
+    public String returnToAddBook(@ModelAttribute("books") Book book, HttpSession session){
+        if(session.getAttribute("user_id") == null) {
+            return "redirect:/";
+        }
         return "add_book.jsp";
     }
 
@@ -139,6 +142,7 @@ public class PageController {
             BindingResult result,
             HttpSession session
     ){
+
         if(result.hasErrors()){
             return "add_book.jsp";
         }
@@ -155,7 +159,7 @@ public class PageController {
             Model model
     ){
         if(session.getAttribute("user_id") == null) {
-            return "redirect:";
+            return "redirect:/";
         }
         model.addAttribute("author", authorService.findAuthorById((Long)session.getAttribute("user_id")));
         model.addAttribute("book", bookService.findBookById(id));
@@ -169,9 +173,10 @@ public class PageController {
             HttpSession session,
             Model model){
         if(session.getAttribute("user_id") == null) {
-            return "redirect:";
+            return "redirect:/";
         }
-        model.addAttribute("book", bookService.findBookById(id));
+        model.addAttribute("books", bookService.findBookById(id));
+
         return "edit_book.jsp";
     }
 
@@ -188,11 +193,14 @@ public class PageController {
             @PathVariable("id") Long id,
             @Valid @ModelAttribute("books") Book bock,
             BindingResult result,
-            HttpSession session
+            HttpSession session,
+            Model model
     ){
         if(result.hasErrors()){
+            model.addAttribute("id", id);
             return "edit_book.jsp";
         }
+
         Book target = bookService.findBookById(id);
         target.setTitle(bock.getTitle());
         target.setAuthorName(bock.getAuthorName());

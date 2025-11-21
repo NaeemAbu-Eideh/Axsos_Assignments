@@ -40,6 +40,7 @@ public class Book {
     @JoinColumn(name = "author_id")
     private Author author;
 
+
     public Book() {}
 
     public Book(String title, String authorName, String thought) {

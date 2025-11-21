@@ -26,11 +26,12 @@
             <a class="underline text-[1.3em] text-blue-700" href= <c:out value="/books"/> > Back to my shelves</a>
         </div>
 
-        <form:form cssClass="mt-4 w-400 mx-auto" action="/books/${book.id}/edit/save-edit" method="post" modelAttribute="books">
+        <form:form cssClass="mt-4 w-400 mx-auto" action="/books/${id}/edit/save-edit" method="post" modelAttribute="books">
+
             <div class="w-150 mb-6">
                 <p class="mb-4 mt-5"><form:errors path="title" cssClass="text-red-700 "/></p>
                 <form:label path="title" cssClass="mr-20">Title: </form:label>
-                <form:input alt="" path="title" cssClass="border py-2"/>
+                <form:input  path="title" cssClass="border py-2"/>
             </div>
             <div class="w-150 mb-6">
                 <p class="mb-4"><form:errors path="authorName" cssClass="text-red-700"/></p>

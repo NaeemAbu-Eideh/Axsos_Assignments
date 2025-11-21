@@ -7,29 +7,29 @@ import jakarta.validation.constraints.Size;
 public class AuthorLogin {
     @NotBlank(message = AuthorErrorMessage.NOTBLANK)
     @Email(message = AuthorErrorMessage.EMAIL)
-    private String email;
+    private String emailLogin;
 
     @NotBlank(message = AuthorErrorMessage.NOTBLANK)
     @Size(min = 8, message = AuthorErrorMessage.PASSWOED)
-    private String password;
+    private String passwordLogin;
 
     public AuthorLogin() {}
 
     public AuthorLogin(String email, String password) {
-        this.email = email;
-        this.password = password;
+        this.emailLogin = email;
+        this.passwordLogin = password;
     }
     public String getEmail() {
-        return email;
+        return emailLogin;
     }
     public void setEmail(String email) {
-        this.email = email;
+        this.emailLogin = email;
     }
     public String getPassword() {
-        return password;
+        return passwordLogin;
     }
     public void setPassword(String password) {
-        this.password = password;
+        this.passwordLogin = password;
     }
 
 }

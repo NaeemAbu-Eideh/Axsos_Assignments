@@ -54,6 +54,7 @@ public class Author {
         this.updatedAt = new Date();
     }
 
+
     public Author() {}
 
     public Author(String name, String email, String password, String confirmPassword) {
