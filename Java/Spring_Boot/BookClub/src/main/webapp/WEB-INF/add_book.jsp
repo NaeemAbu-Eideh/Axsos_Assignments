@@ -27,20 +27,20 @@
         </div>
 
         <form:form cssClass="mt-4 w-400 mx-auto" action="/books/new/add" method="post" modelAttribute="books">
-            <div class="flex justify-between w-100 mb-6">
-                <form:label path="title">Title: </form:label>
-                <form:input path="title" cssClass="border py-2"/>
+            <div class="w-150 mb-6">
                 <p class="mb-4 mt-5"><form:errors path="title" cssClass="text-red-700 "/></p>
+                <form:label path="title" cssClass="mr-20">Title: </form:label>
+                <form:input path="title" cssClass="border py-2"/>
             </div>
-            <div class="flex justify-between w-100 mb-6">
-                <form:label path="authorName">Author: </form:label>
-                <form:input path="authorName" cssClass="border py-2"/>
+            <div class="w-150 mb-6">
                 <p class="mb-4"><form:errors path="authorName" cssClass="text-red-700"/></p>
+                <form:label path="authorName" cssClass="mr-20">Author: </form:label>
+                <form:input path="authorName" cssClass="border py-2"/>
             </div>
-            <div class="flex justify-between w-100 mb-6">
-                <form:label path="thought">Description: </form:label>
-                <form:input path="thought" cssClass="border py-2"/>
+            <div class="w-150 mb-6">
                 <p class="mb-4"><form:errors path="thought" cssClass="text-red-700"/></p>
+                <form:label path="thought" cssClass="mr-20">Description: </form:label>
+                <form:input path="thought" cssClass="border py-2"/>
             </div>
             <input type="submit" class="border px-3 px-5 font-bold block ml-30 mb-6">
         </form:form>
