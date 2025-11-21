@@ -47,8 +47,12 @@ public class AuthorService {
         return author;
     }
 
-    public boolean isMatch(String password, String confirmPassword){
-        return password.equals(confirmPassword);
+    public boolean isMatch(String password, String confirmPassword, BindingResult result){
+        if(!password.equals(confirmPassword)){
+            result.rejectValue("password", "register", "the password and confirm password does not match");
+            return false;
+        }
+        return true;
     }
 
     public Author isFound(String email, BindingResult result){
@@ -60,6 +64,10 @@ public class AuthorService {
         return null;
     }
 
-
+    public Author createAuthor(Author author){
+        String password = BCrypt.hashpw(author.getPassword(), BCrypt.gensalt());
+        author.setPassword(password);
+        return saveAuthor(author);
+    }
 
 }

@@ -3,12 +3,10 @@ package com.example.bookclub.controllers;
 import com.example.bookclub.models.Author;
 import com.example.bookclub.models.AuthorLogin;
 import com.example.bookclub.models.Book;
-import com.example.bookclub.repositories.BookRepository;
 import com.example.bookclub.services.AuthorService;
 import com.example.bookclub.services.BookService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,20 +51,16 @@ public class PageController {
         }
 
         Author check = authorService.isFound(author.getEmail(), result);
-
         if(check != null){
             return "login_register.jsp";
         }
 
-        boolean isMatch = authorService.isMatch(author.getPassword(), author.getConfirmPassword());
+        boolean isMatch = authorService.isMatch(author.getPassword(), author.getConfirmPassword(), result);
         if(!isMatch){
-            result.rejectValue("password", "register", "the password and confirm password does not match");
             return "login_register.jsp";
         }
 
-        String password = BCrypt.hashpw(author.getPassword(), BCrypt.gensalt());
-        author.setPassword(password);
-        Author target = authorService.saveAuthor(author);
+        Author target = authorService.createAuthor(author);
         session.setAttribute("user_id", target.getId());
         return "redirect:/books";
     }
