@@ -32,7 +32,7 @@
         </div>
 
         <table class="border w-400 mx-auto">
-            <tr class="border bg-gray-300">
+            <tr class="border bg-gray-400">
                 <th class="border w-20 px-3 py-3">ID</th>
                 <th class="border w-100 py-3"> Book Title </th>
                 <th class="border w-100 py-3">Author Name</th>
@@ -40,7 +40,7 @@
             </tr>
 
             <c:forEach var="book" items="${books}">
-                <tr class="border odd:bg-gray-300">
+                <tr class="border odd:bg-gray-200">
                     <td class="border w-20 px-3 py-3"><c:out value="${book.id}"/></td>
                     <td class="border w-100 pl-3 py-3"> <a class="text-[1.3em] text-blue-700 underline" href= <c:out value="/books/${book.id}"/>> <c:out value="${book.title}"/> </a> </td>
                     <td class="border w-100 pl-3 py-3"><c:out value="${book.authorName}"/></td>
