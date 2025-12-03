@@ -52,23 +52,15 @@ class Effect extends Card{
 
     choose(target){
         if(this.stat === "resilience"){
-            if(this.value > 0){
             target.resilience += this.value;
-            }
-            else{
-                target.resilience -= this.value;
-            }
         }
         else{
-            if(this.value > 0){
-                target.power += this.value;
-            }
-            else{
-                target.power -= this.value;
-            }
+            target.power += this.value;
         }
     }
 }
+
+
 
 
 
