@@ -18,7 +18,7 @@ function print(){
 } 
 console.log(brendan); // print super cool
 
-
+ 
 var food ='chicken';
 console.log (food); // print chicken
 eat(); // print half-checken
@@ -50,8 +50,6 @@ function rewind(){
     console.log(genre);
 }
 console.log(genre); // disco
-
-
 
 dojo ="san jose";
 console.log(dojo); // san jois 
