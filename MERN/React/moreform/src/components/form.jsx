@@ -39,8 +39,8 @@ const Form = ()=>{
     const setEmailErrorMeesage = (e) =>{
         setEmail(e.target.value);
 
-        if(email.length < 2){
-            setEmailError("The email must be at least 2 characters");
+        if(email.length < 5){
+            setEmailError("The email must be at least 5 characters");
         }
         else{
             setEmailError("");
@@ -49,7 +49,7 @@ const Form = ()=>{
 
     const setPasswordErrorMeesage = (e) =>{
         setPassword(e.target.value);
-        
+
         if(password.length < 8){
             setPasswordError("The password must be at least 8 characters");
         }
