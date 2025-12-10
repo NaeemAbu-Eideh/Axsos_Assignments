@@ -5,7 +5,9 @@ const Word = () => {
     const {word, color, textColor, bgColor} = useParams();
     return (
         <>
-            <h1 style={{color: color !== undefined? color : textColor, backgroundColor: bgColor !== undefined? bgColor: "white"}} className={"font-bold text-center mt-10 text-3xl"}>The word is: {word}</h1>
+            {
+                isNaN(word) ? <h1 style={{color: color !== undefined? color : textColor, backgroundColor: bgColor !== undefined? bgColor: "white"}} className={"font-bold text-center mt-10 text-3xl"}>The word is: {word}</h1> : <h1 style={{color: color !== undefined? color : textColor, backgroundColor: bgColor !== undefined? bgColor: "white"}} className={"font-bold text-center mt-10 text-3xl"}>The number is: {word}</h1>
+            }
         </>
     );
 }
